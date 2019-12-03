@@ -12,6 +12,10 @@ Functions:
 - View Stream Status Of A Twitch Streamer (Automatic Updates!
 - Use !help To View A Full List Of Commands
 
+Issues & Requests:
+
+Please Direct Offical Bug Reports To The "Issue" Tab
+
 Contact:
 
 This bot is created and operated by Evelyn Howard
