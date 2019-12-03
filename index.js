@@ -1,4 +1,8 @@
 const { Client, Collection } = require('discord.js');
+const { stripIndents } = require("common-tags");
+const { promptMessage } = require("./functions");
+var request = require("request");
+var fs = require("fs");
 
 const client = new Client({
   disableEveryone: true
@@ -58,6 +62,41 @@ client.on("message", async message => {
   // If a command is finally found, run the command
   if (command) 
       command.run(client, message, args);
+});
+
+var online;
+
+client.on('ready', () => {
+  //var channel = client.channels.get('651186596682661941');
+  var channel = client.channels.find(ch => ch.name === 'announcements');
+  
+  if (online == true) {
+    var isOnline = setInterval(isOnline, 300000);
+  } else {
+    var isOnline = setInterval(isOnline, 60000);
+  }
+ 
+
+  function isOnline() {
+    var options = { method: 'GET',
+        url: 'https://api.twitch.tv/helix/streams?user_login=dreamofwhiteroses',
+        headers:{ 'Client-ID': '3h1w0cvre78wdaa4tcm0w794r3xhjo' } };
+
+    request(options, function (error, response, body) {
+        var data = JSON.parse(body);
+
+        if (data && data.data[0]) {
+            console.log(" is online!");
+            channel.send("@everyone" + " User Is Now Streaming On Twitch!");
+            online = true;
+        } else {
+            console.log(" is not online");
+            online =  false;
+        }
+        if (error) throw new Error(error);
+        //console.log(JSON.parse(body));
+    });
+  }
 });
 
 // Do Not Change
