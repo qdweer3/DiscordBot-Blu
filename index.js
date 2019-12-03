@@ -1,4 +1,5 @@
 const { Client, Collection } = require('discord.js');
+const { config } = require("dotenv");
 const { stripIndents } = require("common-tags");
 const { promptMessage } = require("./functions");
 var request = require("request");
@@ -8,7 +9,9 @@ const client = new Client({
   disableEveryone: true
 });
 
-const auth = require('./auth.json');
+config({
+  path: __dirname + "/.env"
+});
 
 client.commands = new Collection();
 client.aliases = new Collection();
@@ -100,4 +103,4 @@ client.on('ready', () => {
 });
 
 // Do Not Change
-client.login(auth.token);
+client.login(process.env.TOKEN);
