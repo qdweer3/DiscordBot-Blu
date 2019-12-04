@@ -20,6 +20,10 @@ Now with Twitch integration!
 
 Please Direct Offical Bug Reports To The "Issue" Tab
 
+## Link To Test Server:
+
+https://discord.gg/ekjmwm9
+
 ## Contact:
 
 This bot is created and operated by Evelyn Howard
