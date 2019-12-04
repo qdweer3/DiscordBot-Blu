@@ -1,10 +1,14 @@
 # DiscordBot-Blu
 
-Created By: Evelyn Howard
+## Created By: 
 
-Update: Now with Twitch integration!
+Evelyn Howard
 
-Functions:
+## Update: 
+
+Now with Twitch integration!
+
+## Functions:
 
 - Ability To Moderate Users (Kick, Ban, Mute, etc)
 - View User Information
@@ -12,14 +16,14 @@ Functions:
 - View Stream Status Of A Twitch Streamer (Automatic Updates!
 - Use !help To View A Full List Of Commands
 
-Issues & Requests:
+## Issues & Requests:
 
 Please Direct Offical Bug Reports To The "Issue" Tab
 
-Contact:
+## Contact:
 
 This bot is created and operated by Evelyn Howard
 
 All inquireies and questions should be directed at ThatOneGirl#0666 on Dicord or The.Evelyn.Howard@gmail.com
 
-Special Thanks To @PotatoBlu For The Bot Name And Images!
+## Special Thanks To @PotatoBlu For The Bot Name And Images!
